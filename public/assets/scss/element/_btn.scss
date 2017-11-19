@@ -1,0 +1,16 @@
+[class*='btn'] {
+	cursor: pointer;
+	user-select: none;
+  text-align: center;  
+}
+
+.calltoaction-btn {
+  display: inline-block;
+  width: 120px;
+  visibility: visible;
+	@media screen and (max-width: $breakpoint-nav-transform) {
+		position: fixed;
+		top: 5px;
+		right: 3%;
+	}
+}
