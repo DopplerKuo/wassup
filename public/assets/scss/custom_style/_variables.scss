@@ -24,3 +24,19 @@ $p300: PingFangTC-Light, xingothic-tc, sans-serif, Microsoft JhengHei;
 $p400: PingFangTC-Regular, xingothic-tc, sans-serif, Microsoft JhengHei;
 $p500: PingFangTC-Medium, xingothic-tc, sans-serif, Microsoft JhengHei;
 $p600: PingFangTC-Semibold, xingothic-tc, sans-serif, Microsoft JhengHei;
+
+// breakpoint management
+$mobile: 768px;
+$pad: 992px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+  	@content
+  }
+}
+
+@mixin pad {
+  @media screen and  (max-width: $pad) {
+    @content
+  }
+}
