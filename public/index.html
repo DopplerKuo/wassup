@@ -11,7 +11,7 @@
   <meta content="WASSUP｜挖砂貓砂" property="og:site_name">
   <meta content="喵，你忘了給我簡介ㄌ，我只好隨便亂打一下，朕就是任性，喵～" property="og:description">
   <meta content="http://wassup-cat.herokuapp.com/assets/img/common/fbshare.jpg" property="og:image">
-  <link href="" rel="shortcut icon">
+  <link href="assets/img/common/favicon.jpg" rel="shortcut icon">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -26,15 +26,19 @@
         <img src="assets/img/main/nav/02_頭像_wassup.svg" alt="">
       </div>
       <div class="nav-icon-btn menu-btn">
-        <img class="noactive" src="assets/img/main/nav/02_漢堡.svg" alt="">
-        <img class="active" src="assets/img/main/nav/02_漢堡（點後）.svg" alt="">
+        <img src="assets/img/main/nav/02_漢堡.svg" alt="">
+      </div>
+      <div class="nav-list">
+        <a href="">成為砂石大亨</a>
+        <a href="">過去買砂記錄</a>
+        <a href="">Facebook</a>
       </div>
       <div class="bottom">
         <div class="nav-icon-btn backtop">
           <img class="noactive" src="assets/img/main/nav/04_往上.svg" alt="">
           <img class="active" src="assets/img/main/nav/04_往上（點後）.svg" alt="">
         </div>
-        <div class="nav-icon-btn cart">
+        <div class="nav-icon-btn cart" @click="showBuy">
           <img class="noactive" src="assets/img/main/nav/03_商品區.svg" alt="">
           <img class="active" src="assets/img/main/nav/03_商品區（點後）.svg" alt="">
         </div>
@@ -51,7 +55,7 @@
       <a href="javascript:;">【Part 3】品質保證</a>
       <a href="javascript:;">【Part 4】購前須知</a>
       <a href="javascript:;">【Part 5】名人推薦</a>
-      <a href="javascript:;" class="btn calltoaction">
+      <a href="javascript:;" class="btn calltoaction" @click="showBuy">
         <img class="noactive" src="assets/img/main/nav/05_購買鈕.svg" alt="">
         <img class="active" src="assets/img/main/nav/05_購買鈕（點後）.svg" alt="">
       </a>
@@ -283,7 +287,7 @@
         <img class="noactive" src="assets/img/main/nav/05-2_貓砂音樂節目.svg" alt="">
         <img class="active" src="assets/img/main/nav/05-2_貓砂音樂節目（點後）.svg" alt="">
       </a>
-      <a class="buy-btn">
+      <a class="buy-btn" @click="showBuy">
         <img class="noactive" src="assets/img/main/nav/05_購買鈕.svg" alt="">
         <img class="active" src="assets/img/main/nav/05_購買鈕（點後）.svg" alt="">
       </a>
@@ -293,11 +297,115 @@
     </div>
   </footer>
 
+  <div id="buy" :class="{ active: isShow}">
+    <div class="close close-btn" @click="showBuy">
+      <i class="fa fa-times"></i>
+    </div>
+    <div class="header">Wassup 挖砂貓砂產品</div>
+    <div class="flex">
+      <div class="img">
+        <img :class="wantToBuyItemId === 3722 ? 'active' : ''" src="assets/img/main/p1.png" alt="">
+        <img :class="wantToBuyItemId === 3723 ? 'active' : ''" src="assets/img/main/p2.png" alt="">
+        <img :class="wantToBuyItemId === 3724 ? 'active' : ''" src="assets/img/main/p3.png" alt="">
+      </div>
+      <form action="https://wassup.backme.tw/cashflow/shopping_cart_checkout?locale=zh-TW" method='post'>
+        <input 
+            style="display: none" 
+            type='hidden'
+            name='utf8' 
+            value='✓'>
+        <input 
+            style="display: none" 
+            type='hidden' 
+            name='flag' value="">
+        <input 
+            style="display: none"
+            type='hidden'
+            :name="'items[1][project_id]'"
+            value='720'>
+        <input 
+            style="display: none" 
+            type='hidden'
+            :name="'items[1][reward_id]'"
+            :value='wantToBuyItemId'>
+        <input 
+            style="display: none" 
+            type='hidden'
+            :name="'items[1][quantity]'"
+            :value='wantToBuyItemQuantity'>
+        <input 
+            style="display: none"
+            type='hidden'
+            :name="'items[2][project_id]'"
+            value='720'>
+        <input 
+            style="display: none" 
+            type='hidden'
+            :name="'items[2][reward_id]'"
+            :value='3725'>
+        <input 
+            style="display: none" 
+            type='hidden'
+            :name="'items[2][quantity]'"
+            :value='wantToBuyItemQuantity >= 5 ? 0 : 1'>
+        <div class="selector flex-l3-m2-">
+          <div class="p1" @click="changeWantToBuyItemId(3722)">
+            <input id="p1" type="checkbox" :checked="wantToBuyItemId === 3722" style="display: none">
+            <label>
+              <i class="fa fa-check"></i>
+            </label>
+            <div class="p-title">
+              So Fresh, So Clean 完美球砂
+              <div class="price">NTD$200/10L</div>
+            </div>
+          </div>
+          <div class="p2" @click="changeWantToBuyItemId(3723)">
+            <input id="p2" type="checkbox" :checked="wantToBuyItemId === 3723" style="display: none">
+            <label>
+              <i class="fa fa-check"></i>
+            </label>
+            <div class="p-title">
+              Tai Chi 黑白雙煞活性炭貓砂
+              <div class="price">NTD$200/10L</div>
+            </div>
+          </div>
+          <div class="p3" @click="changeWantToBuyItemId(3724)">
+            <input id="p3" type="checkbox" :checked="wantToBuyItemId === 3724" style="display: none">
+            <label>
+              <i class="fa fa-check"></i>
+            </label>
+            <div class="p-title">
+              #53 有鬆天然木松砂
+              <div class="price">NTD$200/10L</div>
+            </div>
+          </div>
+        </div>
+        <div class="quantity-selector">
+          <div class="left">購買數量</div>
+          <div class="right">
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 1 }" @click="wantToBuyItemQuantity = 1">1包</div>
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 2 }" @click="wantToBuyItemQuantity = 2">2包</div>
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 3 }" @click="wantToBuyItemQuantity = 3">3包</div>
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 4 }" @click="wantToBuyItemQuantity = 4">4包</div>
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 5 }" @click="wantToBuyItemQuantity = 5">1箱</div>
+            <div class="btn" :class="{ active: wantToBuyItemQuantity === 10 }" @click="wantToBuyItemQuantity = 10">2箱</div>
+            <div class="info">運費NTD$100，1箱以上免運(每箱含5包)</div>
+          </div>
+        </div>
+        <div class="total">
+          <div class="text">總計</div>
+          NTD$
+          {{ wantToBuyItemQuantity >= 5 ? 200 * wantToBuyItemQuantity : 200 * wantToBuyItemQuantity + 100 }}
+          <div class="submit-btn" @click="formSubmit">立刻買砂</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
 </body>
 <script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
-<script src="/assets/js/vendor/headroom/headroom.js"></script>
-<script src="/assets/js/vendor/headroom/jQuery.headroom.js"></script>
-<script src="/assets/js/animateNumber.js"></script>
+<!-- <script src="/assets/js/vendor/vue.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28-csp/vue.js"></script>
 <script src="/assets/js/aboutScroll.js"></script>
 <script src="/assets/js/index.js"></script>
 </html>
