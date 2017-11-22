@@ -467,9 +467,10 @@ body {
   width: 100%;
   height: calc( 100vh - 50px);
   background-image: url("../img/main/1-bg.png");
-  background-size: auto 100%;
-  background-position: 50% 0%;
+  background-size: 1050px auto;
+  background-position: 50% 50px;
   bottom: 0;
+  left: 0;
   z-index: 2;
   pointer-events: none;
   -webkit-transition: .3s linear;
@@ -1094,7 +1095,9 @@ footer {
     padding: 0 5px; }
   @media screen and (max-width: 992px) {
     .copyright {
-      opacity: .5; } }
+      opacity: .5;
+      line-height: 1;
+      padding: 10px 5px; } }
 
 #buy.active {
   opacity: 1;
@@ -1150,6 +1153,10 @@ footer {
     line-height: 19px;
     letter-spacing: 0;
     border-radius: 100%; }
+    @media screen and (max-width: 768px) {
+      #buy .close {
+        top: 10px;
+        right: 10px; } }
   #buy .img {
     margin: 0;
     -webkit-box-flex: 0;
@@ -1160,11 +1167,11 @@ footer {
     font-size: 0; }
     @media screen and (max-width: 768px) {
       #buy .img {
-        -webkit-box-flex: 100%;
-        -webkit-flex: 100%;
-        -ms-flex: 100%;
-        flex: 100%;
-        height: 100px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        height: 130px;
         overflow: hidden;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1327,9 +1334,11 @@ footer {
   left: 0;
   top: 0;
   width: 70%;
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
   .bg-text img {
-    width: 100%; }
+    width: 100%;
+    min-width: 600px; }
   .bg-text.a {
     top: 24%; }
   .bg-text.b {
