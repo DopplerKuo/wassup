@@ -4,43 +4,50 @@
   <meta charset="UTF-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>WASSUP｜挖砂貓砂</title>
+  <title>Wassup｜挖砂貓砂</title>
   <meta content="" name="keywords">
-  <meta content="喵，你忘了給我簡介ㄌ，我只好隨便亂打一下，朕就是任性，喵～" name="description">
+  <meta content='純天然內蒙古優質青礦砂，Wassup 挖砂貓砂，絕對是"凝"最好的選擇！' name="description">
   <meta content="WASSUP｜挖砂貓砂" property="og:title">
   <meta content="WASSUP｜挖砂貓砂" property="og:site_name">
-  <meta content="喵，你忘了給我簡介ㄌ，我只好隨便亂打一下，朕就是任性，喵～" property="og:description">
+  <meta content='純天然內蒙古優質青礦砂，Wassup 挖砂貓砂，絕對是"凝"最好的選擇！' property="og:description">
   <meta content="http://wassup-cat.herokuapp.com/assets/img/common/fbshare.jpg" property="og:image">
-  <link href="assets/img/common/favicon.jpg" rel="shortcut icon">
+  <link href="/assets/img/common/favicon.jpg" rel="shortcut icon">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <script src="/assets/js/vendor/font.js"></script>
 <body>
-  <nav id="nav">
-    <div class="logo">
-      <img src="assets/img/main/nav/logo.svg" alt="">
+  <div id="loading">
+    <div class="block-og"></div>
+    <div class="block-db"></div>
+    <div class="block-b"></div>
+    <div class="progress-text LatinaEssential">
+      <b>0</b>%
     </div>
+  </div>
+
+  <nav id="nav">
     <div class="right">
       <div class="idontunderstand">
-        <img src="assets/img/main/nav/02_頭像_wassup.svg" alt="">
+        <img src="/assets/img/main/nav/02_頭像_wassup.svg" alt="">
       </div>
       <div class="nav-icon-btn menu-btn">
-        <img src="assets/img/main/nav/02_漢堡.svg" alt="">
+        <img src="/assets/img/main/nav/02_漢堡.svg" alt="">
       </div>
       <div class="nav-list">
-        <a href="">成為砂石大亨</a>
-        <a href="">過去買砂記錄</a>
-        <a href="">Facebook</a>
+        <a href="https://wassup.backme.tw/user/backer_history?locale=zh-TW" target="_blank">過去買砂記錄</a>
+        <a href="https://www.facebook.com/wassupcatlitter/
+" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/wassupcatlitter/" target="_blank">Instagram</a>
       </div>
       <div class="bottom">
         <div class="nav-icon-btn backtop">
-          <img class="noactive" src="assets/img/main/nav/04_往上.svg" alt="">
-          <img class="active" src="assets/img/main/nav/04_往上（點後）.svg" alt="">
+          <img class="noactive" src="/assets/img/main/nav/04_往上.svg" alt="">
+          <img class="active" src="/assets/img/main/nav/04_往上（點後）.svg" alt="">
         </div>
         <div class="nav-icon-btn cart" @click="showBuy">
-          <img class="noactive" src="assets/img/main/nav/03_商品區.svg" alt="">
-          <img class="active" src="assets/img/main/nav/03_商品區（點後）.svg" alt="">
+          <img class="noactive" src="/assets/img/main/nav/03_商品區.svg" alt="">
+          <img class="active" src="/assets/img/main/nav/03_商品區（點後）.svg" alt="">
         </div>
       </div>
     </div>
@@ -48,27 +55,40 @@
   <div class="fix-bg bg-"></div>
   <header class="sec sec1">
     <div class="bg bg-cover"></div>
+    <div class="logo">
+      <img src="/assets/img/main/nav/logo.svg" alt="">
+    </div>
     <div class="header-nav">
       <div class="title">快速導覽</div>
-      <a href="javascript:;">【Part 1】凝的疑慮</a>
-      <a href="javascript:;">【Part 2】最新活動</a>
-      <a href="javascript:;">【Part 3】品質保證</a>
-      <a href="javascript:;">【Part 4】購前須知</a>
-      <a href="javascript:;">【Part 5】名人推薦</a>
+      <a href="#sec2">【Part 1】凝的疑慮</a>
+      <a href="#sec3">【Part 2】最新活動</a>
+      <a href="#sec5">【Part 3】品質保證</a>
+      <a href="#sec6">【Part 4】購前須知</a>
+      <!-- <a href="javascript:;">【Part 5】名人推薦</a> -->
       <a href="javascript:;" class="btn calltoaction" @click="showBuy">
-        <img class="noactive" src="assets/img/main/nav/05_購買鈕.svg" alt="">
-        <img class="active" src="assets/img/main/nav/05_購買鈕（點後）.svg" alt="">
+        <img class="noactive" src="/assets/img/main/nav/05_購買鈕.svg" alt="">
+        <img class="active" src="/assets/img/main/nav/05_購買鈕（點後）.svg" alt="">
       </a>
+      <div class="mobile-icon">
+        +
+      </div>
+      <div class="mobile-list">
+        <a href="#sec2">【Part 1】凝的疑慮</a>
+        <a href="#sec3">【Part 2】最新活動</a>
+        <a href="#sec5">【Part 3】品質保證</a>
+        <a href="#sec6">【Part 4】購前須知</a>
+        <!-- <a href="javascript:;">【Part 5】名人推薦</a> -->
+      </div>
     </div>
   </header>
 
-  <section class="sec sec2">
+  <section id="sec2" class="sec sec2">
     <div class="content">
       <div class="title">
-        <img src="assets/img/main/2-title.svg" alt="">
+        <img src="/assets/img/main/2-title.svg" alt="">
       </div>
       <div class="chat">
-        <div class="left">
+        <div class="left reveal">
           <div class="img"></div>
           <div class="text">
             <div class="name">顧客 stu sis</div>
@@ -77,15 +97,15 @@
             </div>
           </div>
         </div>
-        <div class="right">
+        <div class="right reveal">
           <div class="text">
             <div class="name">wassup</div>
             <div class="say">
-              您這個問題完全無須擔心，數字會說話!經過多次測試 3 秒迅速凝結！挖砂貓砂絕對是"凝"最好的選擇～
+              您這個問題完全無須擔心，數字會說話！經過多次測試 3 秒迅速凝結！挖砂貓砂絕對是"凝"最好的選擇～
             </div>
           </div>
         </div>
-        <div class="left">
+        <div class="left reveal">
           <div class="img"></div>
           <div class="text">
             <div class="name">顧客 stu sis</div>
@@ -94,7 +114,7 @@
             </div>
           </div>
         </div>
-        <div class="right">
+        <div class="right reveal">
           <div class="text">
             <div class="name">wassup</div>
             <div class="say">
@@ -102,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="left">
+        <div class="left reveal">
           <div class="img"></div>
           <div class="text">
             <div class="name">顧客 stu sis</div>
@@ -111,7 +131,7 @@
             </div>
           </div>
         </div>
-        <div class="right">
+        <div class="right reveal">
           <div class="text">
             <div class="name">wassup</div>
             <div class="say">
@@ -119,19 +139,19 @@
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="text">
+        <div class="right reveal">
+          <div class="text small">
             <div class="say">啊！</div>
           </div>
         </div>
-        <div class="right">
+        <div class="right reveal">
           <div class="text">
             <div class="say">
               另外，我們還有將松木粉高溫高壓，壓合而成的松木砂，吸水力甭多說、迅速吸水膨脹分解，非常節省用量，CP 值也是挺高的！
             </div>
           </div>
         </div>
-        <div class="left">
+        <div class="left reveal">
           <div class="img"></div>
           <div class="text">
             <div class="name">顧客 stu sis</div>
@@ -140,7 +160,7 @@
             </div>
           </div>
         </div>
-        <div class="right">
+        <div class="right reveal">
           <div class="text">
             <div class="name">wassup</div>
             <div class="say">
@@ -152,18 +172,20 @@
     </div>
   </section>
 
-  <section class="sec sec3">
+  <section id="sec3" class="sec sec3">
     <div class="content">
+      <div class="bg-text a"><img src="/assets/img/main/06-3_背景字1.svg" alt=""></div>
+      <div class="bg-text b"><img src="/assets/img/main/06-3_背景字2.svg" alt=""></div>
       <div class="title">
-        <img src="assets/img/main/3-title.svg" alt="">
+        <img src="/assets/img/main/3-title.svg" alt="">
       </div>
       <div class="flex-ac-jc-">
         <div class="img">
-          <img src="assets/img/main/影片區_春艷人像.png" alt="">
+          <img src="/assets/img/main/影片區_春艷人像.png" alt="">
         </div>
         <div class="video">
           <div class="youtube-box">
-            <iframe src="https://www.youtube.com/embed/Rne4oL1NZrU" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/A6arSGSKRB0" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -178,17 +200,18 @@
 
   <section class="sec sec4">
     <div class="content">
+      <div class="bg-text c"><img src="/assets/img/main/06-3_背景字3.svg" alt=""></div>
       <div class="title">
-        <img src="assets/img/main/4-title.svg" alt="">
+        <img src="/assets/img/main/4-title.svg" alt="">
       </div>
       <div class="flex-ac-jc-">
         <div class="video">
           <div class="youtube-box">
-            <iframe src="https://www.youtube.com/embed/Rne4oL1NZrU" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xaYuxEFTbQ0" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
         <div class="img">
-          <img src="assets/img/main/影片區_dudu人像.png" alt="">
+          <img src="/assets/img/main/影片區_dudu人像.png" alt="">
         </div>
       </div>
       <div class="intro flex-afs-">
@@ -200,15 +223,15 @@
     </div>
   </section>
 
-  <section class="sec sec5">
+  <section id="sec5" class="sec sec5">
     <div class="content">
       <div class="flex-l2-m1-">
         <div class="title">
-          <img src="assets/img/main/5-title.svg" alt="">
+          <img src="/assets/img/main/5-title.svg" alt="">
         </div>
         <div class="video">
           <div class="youtube-box">
-            <iframe src="https://www.youtube.com/embed/Rne4oL1NZrU" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/eyxMvYf678M" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -218,8 +241,8 @@
             <div class="num">1</div>
             <div class="text">純天然優質土，就算你窮到吃土也充滿正能量 (不要真的吃阿)</div>
           </div>
-          <img src="assets/img/main/5-1.png" alt="">
-          <div class="more-btn">more</div>
+          <img src="/assets/img/main/5-1.png" alt="">
+          <div class="more-btn" @click="showPopup(1)">more</div>
         </div>
 
         <div class="box">
@@ -227,8 +250,8 @@
             <div class="num">2</div>
             <div class="text">99%低粉塵，比你表哥速霸陸的底盤還要低</div>
           </div>
-          <img src="assets/img/main/5-2.png" alt="">
-          <div class="more-btn">more</div>
+          <img src="/assets/img/main/5-2.png" alt="">
+          <div class="more-btn" @click="showPopup(2)">more</div>
         </div>
 
         <div class="box">
@@ -236,8 +259,8 @@
             <div class="num">3</div>
             <div class="text">社會在走，抗菌要有，外加除臭功效，讓你家貓咪出來走跳，也充滿自信</div>
           </div>
-          <img src="assets/img/main/5-3.png" alt="">
-          <div class="more-btn">more</div>
+          <img src="/assets/img/main/5-3.png" alt="">
+          <div class="more-btn" @click="showPopup(3)">more</div>
         </div>
 
         <div class="box">
@@ -245,15 +268,15 @@
             <div class="num">4</div>
             <div class="text">超高凝結力，讓我們超凝結</div>
           </div>
-          <img src="assets/img/main/5-4.png" alt="">
-          <div class="more-btn">more</div>
+          <img src="/assets/img/main/5-4.png" alt="">
+          <div class="more-btn" @click="showPopup(4)">more</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec6">
-    <img class="img-6" src="assets/img/main/6-bg.png" alt="">
+  <section id="sec6" class="sec sec6">
+    <img class="img-6" src="/assets/img/main/6-bg.png" alt="">
     <div class="content">
       <div class="title">
         PRE-PURCHASE<br>
@@ -275,27 +298,25 @@
   <footer>
     <div class="content">
       <div class="logo">
-        <img src="assets/img/main/nav/logo.svg" alt="">
+        <img src="/assets/img/main/nav/logo.svg" alt="">
       </div>
       <p class="add">地址: 臺灣(國)新北市蘆洲區長安街 282 之 2 號 3 樓</p>
       <p class="email">連絡信箱: wassup.catlitter@gmail.com</p>
-      <a class="learnmore-btn">
-        <img class="noactive" src="assets/img/main/nav/05-1_了解更多貓砂.svg" alt="">
-        <img class="active" src="assets/img/main/nav/05-1_了解更多貓砂（點後）.svg" alt="">
+      <a href="https://www.facebook.com/wassupcatlitter/" target="_blank" class="learnmore-btn">
+        <img class="noactive" src="/assets/img/main/nav/05-1_了解更多貓砂.svg" alt="">
+        <img class="active" src="/assets/img/main/nav/05-1_了解更多貓砂（點後）.svg" alt="">
       </a>
-      <a class="music-btn">
-        <img class="noactive" src="assets/img/main/nav/05-2_貓砂音樂節目.svg" alt="">
-        <img class="active" src="assets/img/main/nav/05-2_貓砂音樂節目（點後）.svg" alt="">
+      <a href="https://www.youtube.com/channel/UCebKz3gWzHkQ3xA2A_aDF1Q" target="_blank" class="music-btn">
+        <img class="noactive" src="/assets/img/main/nav/05-2_貓砂音樂節目.svg" alt="">
+        <img class="active" src="/assets/img/main/nav/05-2_貓砂音樂節目（點後）.svg" alt="">
       </a>
-      <a class="buy-btn" @click="showBuy">
-        <img class="noactive" src="assets/img/main/nav/05_購買鈕.svg" alt="">
-        <img class="active" src="assets/img/main/nav/05_購買鈕（點後）.svg" alt="">
-      </a>
-      <div class="copyright">
-        © Wassup Catlitter 2017 Handcrafted with hard work and love by us
-      </div>
     </div>
   </footer>
+  <div class="sec copyright">
+    <div class="content">
+      © Wassup Catlitter 2017 Handcrafted with hard work and love by us
+    </div>
+  </div>
 
   <div id="buy" :class="{ active: isShow}">
     <div class="close close-btn" @click="showBuy">
@@ -304,9 +325,9 @@
     <div class="header">Wassup 挖砂貓砂產品</div>
     <div class="flex">
       <div class="img">
-        <img :class="wantToBuyItemId === 3722 ? 'active' : ''" src="assets/img/main/p1.png" alt="">
-        <img :class="wantToBuyItemId === 3723 ? 'active' : ''" src="assets/img/main/p2.png" alt="">
-        <img :class="wantToBuyItemId === 3724 ? 'active' : ''" src="assets/img/main/p3.png" alt="">
+        <img :class="wantToBuyItemId === 3722 ? 'active' : ''" src="/assets/img/main/p1.png" alt="">
+        <img :class="wantToBuyItemId === 3723 ? 'active' : ''" src="/assets/img/main/p2.png" alt="">
+        <img :class="wantToBuyItemId === 3724 ? 'active' : ''" src="/assets/img/main/p3.png" alt="">
       </div>
       <form action="https://wassup.backme.tw/cashflow/shopping_cart_checkout?locale=zh-TW" method='post'>
         <input 
@@ -355,8 +376,8 @@
               <i class="fa fa-check"></i>
             </label>
             <div class="p-title">
-              So Fresh, So Clean 完美球砂
-              <div class="price">NTD$200/10L</div>
+              So Fresh, So Clean<br>完美球砂
+              <div class="price">NTD$220/10L</div>
             </div>
           </div>
           <div class="p2" @click="changeWantToBuyItemId(3723)">
@@ -365,8 +386,8 @@
               <i class="fa fa-check"></i>
             </label>
             <div class="p-title">
-              Tai Chi 黑白雙煞活性炭貓砂
-              <div class="price">NTD$200/10L</div>
+              Tai Chi 黑白雙煞<br>活性炭貓砂
+              <div class="price">NTD$220/10L</div>
             </div>
           </div>
           <div class="p3" @click="changeWantToBuyItemId(3724)">
@@ -375,8 +396,8 @@
               <i class="fa fa-check"></i>
             </label>
             <div class="p-title">
-              #53 有鬆天然木松砂
-              <div class="price">NTD$200/10L</div>
+              #53 有鬆<br>天然木松砂
+              <div class="price">NTD$220/10L</div>
             </div>
           </div>
         </div>
@@ -395,17 +416,86 @@
         <div class="total">
           <div class="text">總計</div>
           NTD$
-          {{ wantToBuyItemQuantity >= 5 ? 200 * wantToBuyItemQuantity : 200 * wantToBuyItemQuantity + 100 }}
+          {{ wantToBuyItemQuantity >= 5 ? 220 * wantToBuyItemQuantity : 220 * wantToBuyItemQuantity + 100 }}
           <div class="submit-btn" @click="formSubmit">立刻買砂</div>
         </div>
       </form>
     </div>
   </div>
 
+  <div class="pop" v-if="popup.isShow">
+    <div class="close" @click="popup.isShow = false"></div>
+    <div class="content" v-if="popup.whichMore === 1">
+      <div class="close" @click="popup.isShow = false">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="img">
+        <img src="/assets/img/main/5-1.png" alt="">
+      </div>
+      <div class="text">
+        <div class="title">純天然優質土，就算你窮到吃土也充滿正能量 (不要真的吃阿)</div>
+        <div class="d">
+          挖砂貓砂選用了內蒙古產出:具備優良吸附及凝結能力，並且色澤較淺、外觀乾淨的優質青礦膨潤土。過程中，使用雙盤造粒，不斷強化及提升顆粒強度、減少粉塵，再利用三百度以上高溫烘乾、並多次檢驗，經過冷卻後，製成質量穩定且凝結力強的顆粒砂。
+        </div>
+      </div>
+    </div>
+    <div class="content" v-if="popup.whichMore === 2">
+      <div class="close" @click="popup.isShow = false">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="img">
+        <img src="/assets/img/main/5-2.png" alt="">
+      </div>
+      <div class="text">
+        <div class="title">99%低粉塵，比你表哥速霸陸的底盤還要低</div>
+        <div class="d">
+          由天然青礦膨潤土製成，並經過多次粉塵循環過濾，以達到超低粉塵效果。製作方法:採用優質礦源，並且加入獨特配方調製原料，細節如下。在製造過程中，使用雙盤造粒，不斷強化及提升強度、減少粉塵，再通過三百度以上高溫烘乾、並多次檢驗，經過冷卻後，製成質量穩定且凝結力強的顆粒砂。
+        </div>
+      </div>
+    </div>
+    <div class="content" v-if="popup.whichMore === 3">
+      <div class="close" @click="popup.isShow = false">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="img">
+        <img src="/assets/img/main/5-3.png" alt="">
+      </div>
+      <div class="text">
+        <div class="title">社會在走，抗菌要有，外加除臭功效，讓你家貓咪出 來走跳，也充滿自信</div>
+        <div class="d">
+          除了礦砂本身擁有的除臭及抗菌效果之外，挖砂貓砂每箱隨機附贈濃縮精油香砂乙包(也可以自行挑選，共有以下四種香味:青蘋果、寶寶香、海洋玫瑰、薰衣草)。另外，挖砂貓砂亦販售添加含有抗菌及除臭效果的天然活性碳貓砂，活性碳擁有良好地吸附能力，可有效吸收臭味， 以達到除臭、抗菌之效果。
+        </div>
+      </div>
+    </div>
+    <div class="content" v-if="popup.whichMore === 4">
+      <div class="close" @click="popup.isShow = false">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="img">
+        <img src="/assets/img/main/5-4.png" alt="">
+      </div>
+      <div class="text">
+        <div class="title">超高凝結力，讓我們超凝結</div>
+        <div class="d">
+          挖砂貓砂選用了產地出自於內蒙古的優質青礦砂，內蒙古地層發育齊全，岩漿活動頻繁，成礦條件好，礦產資源相當豐富。此青礦砂由天然青礦膨潤土製成，色澤較淺、外觀乾淨，另外，砂質均勻、穩定，且凝結力強。
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/vendor/scrollreveal/scrollreveal.min.js"></script>
 <!-- <script src="/assets/js/vendor/vue.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28-csp/vue.js"></script>
 <script src="/assets/js/aboutScroll.js"></script>
 <script src="/assets/js/index.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110073220-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110073220-1');
+</script>
 </html>
