@@ -875,6 +875,9 @@ header.sec {
   background-repeat: no-repeat;
   background-size: contain;
   padding-bottom: 30%; }
+  @media screen and (max-width: 768px) {
+    .sec5 {
+      background-position: center 100%; } }
   .sec5 .content {
     max-width: 1200px; }
   .sec5 .youtube-box {

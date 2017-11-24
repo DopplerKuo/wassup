@@ -673,6 +673,10 @@ header.sec  {
 	background-size: contain;
 	padding-bottom: 30%;
 
+	@media screen and (max-width: 768px) {
+		background-position: center 100%;
+	}
+
 	.content {
 		max-width: 1200px;
 	}
