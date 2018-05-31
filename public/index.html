@@ -40,18 +40,16 @@
 " target="_blank">Facebook</a>
         <a href="https://www.instagram.com/wassupcatlitter/" target="_blank">Instagram</a>
       </div>
-      <div class="bottom">
-        <div class="nav-icon-btn backtop">
-          <img class="noactive" src="/assets/img/main/nav/04_往上.svg" alt="">
-          <img class="active" src="/assets/img/main/nav/04_往上（點後）.svg" alt="">
-        </div>
-        <div class="nav-icon-btn cart" @click="showBuy">
-          <img class="noactive" src="/assets/img/main/nav/03_商品區.svg" alt="">
-          <img class="active" src="/assets/img/main/nav/03_商品區（點後）.svg" alt="">
-        </div>
-      </div>
     </div>
   </nav>
+
+  <div id="call-to-buy" class="nav-icon-btn cart" @click="showBuy" :class="{ active: isShow }">
+    <div id="flash">
+      <div class="flash-content" v-html="flashes"></div>
+    </div>
+    <div class="btn">立刻買砂</div>
+  </div>
+
   <div class="fix-bg bg-"></div>
   <header class="sec sec1">
     <div class="bg bg-cover"></div>
@@ -318,7 +316,8 @@
     </div>
   </div>
 
-  <div id="buy" :class="{ active: isShow}">
+  <div id="buy-bg" :class="{ active: isShow }" @click="showBuy"></div>
+  <div id="buy" :class="{ active: isShow }">
     <div class="close close-btn" @click="showBuy">
       <i class="fa fa-times"></i>
     </div>
@@ -413,7 +412,7 @@
             <div class="info">運費NTD$100，1箱以上免運(每箱含5包)</div>
           </div>
         </div>
-        <div class="total">
+        <div class="fix-bottom-total">
           <div class="text">總計</div>
           NTD$
           {{ wantToBuyItemQuantity >= 5 ? 220 * wantToBuyItemQuantity : 220 * wantToBuyItemQuantity + '+ 100' }}

@@ -78,10 +78,25 @@ $(document).ready(function() {
       popup: {
       	whichMore: 1,
       	isShow: false
-      }
-    },
+			},
+			flashes: ""
+		},
+		
+		created: function () {
+			this.fetchData()
+		},
 
     methods: {
+			fetchData: function () {
+				var self = this
+				$.getJSON('https://wassup.backme.tw/api/projects/720.json?token=c0a0eb9d09079aaff9df860402401f99', function(data) {
+					var flash = data.rewards.filter(function (reward) {
+						return reward.category === '優惠訊息'
+					})
+					self.flashes = flash[0].description
+				})
+			},
+
     	showBuy: function() {
     		this.isShow = !this.isShow
     	},

@@ -6,11 +6,9 @@ $(function(){
 
 		if($this_Top < $barFixedHeight){
 　　　 $('.fix-bg').removeClass('blur');
-			$('.backtop').removeClass('show');
 		}
 		else if($this_Top > $barFixedHeight){
 　　　 $('.fix-bg').addClass('blur')
-			$('.backtop').addClass('show');
 		}
 	}).scroll();
 })
