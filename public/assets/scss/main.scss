@@ -191,6 +191,11 @@ body {
   pointer-events: none;
   transition: 0.3s linear;
   will-change: filter;
+
+  @media screen and (max-width: 600px) {
+    background-size: 90% auto;
+    background-position: 50% 70%;
+  }
 }
 
 .fix-bg.blur {

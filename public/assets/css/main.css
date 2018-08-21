@@ -412,6 +412,10 @@ body {
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
   will-change: filter; }
+  @media screen and (max-width: 600px) {
+    .fix-bg {
+      background-size: 90% auto;
+      background-position: 50% 70%; } }
 
 .fix-bg.blur {
   -webkit-filter: blur(3px);
