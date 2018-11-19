@@ -98,7 +98,7 @@ $(document).ready(function() {
 			},
 
     	showBuy: function() {
-    		this.isShow = !this.isShow
+    		// this.isShow = !this.isShow
     	},
 
     	showPopup: function(which) {
