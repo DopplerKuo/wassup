@@ -18,12 +18,8 @@ $content-max-width: 1180px;
 $content-padding: 8% 5%;
 
 /// font-family
-$p100: PingFangTC-Ultralight, xingothic-tc, sans-serif, Microsoft JhengHei;
-$p200: PingFangTC-Thin, xingothic-tc, sans-serif, Microsoft JhengHei;
-$p300: PingFangTC-Light, xingothic-tc, sans-serif, Microsoft JhengHei;
-$p400: PingFangTC-Regular, xingothic-tc, sans-serif, Microsoft JhengHei;
-$p500: PingFangTC-Medium, xingothic-tc, sans-serif, Microsoft JhengHei;
-$p600: PingFangTC-Semibold, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p400: aktiv-grotesk, 'Noto Sans TC', PingFangTC-Regular, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p800: aktiv-grotesk, 'Noto Sans TC', PingFangTC-Semibold, sans-serif, Microsoft JhengHei;
 
 // breakpoint management
 $mobile: 768px;

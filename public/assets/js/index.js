@@ -39,18 +39,10 @@ $(document).ready(function() {
   $(window).on('load', function() {
   	$("#loading .progress-text b").animateNumbers(100, 100);
   	$("#loading").addClass('completed')
-  })
+	})
+	// loading end
 
-	$(".menu-btn").click(function() {
-		$(this).toggleClass('on');
-		$('.nav-list').toggleClass('on');
-	});
-
-	$(".mobile-icon").click(function() {
-		$(".mobile-list").slideToggle(300);
-		$(".header-nav").toggleClass('active')
-	});
-
+	// a link target animation
 	$(document).on('click', 'a[href^="#"]', function (event) {
 	    event.preventDefault();
 	    $('html, body').animate({
@@ -67,11 +59,22 @@ $(document).ready(function() {
 		duration: 600,
 		delay: 400
 	});
+	// a link target animation end
+
+	var PEOPLE = [
+		'Nike',
+		'dudu',
+		'Leo王',
+		'佑誠',
+		'春m'
+	]
 
   // vue
   Wassup = new Vue ({
     el: 'body',
     data: {
+			isTarget: 'Nike', // 'Nike', 'dudu', 'Leo王', '佑誠', '春m'
+			isSec5ShowIndex: 1,
     	isShow: false,
       wantToBuyItemId: 3722,
       wantToBuyItemQuantity: 1,
@@ -97,6 +100,10 @@ $(document).ready(function() {
 				})
 			},
 
+			changeTarget: function(target) {
+				this.isTarget = target;
+			},
+
     	showBuy: function() {
     		// this.isShow = !this.isShow
     	},
@@ -112,7 +119,21 @@ $(document).ready(function() {
     	
       formSubmit: function() {
         $('#buy').find('form').submit();
-      }
+			},
+			
+			sec5IndexThis: function(index) {
+				this.isSec5ShowIndex = index;
+			},
+
+			sec5IndexNext: function() {
+				var index = this.isSec5ShowIndex + 1 > 5 ? 1: this.isSec5ShowIndex + 1;
+				this.isSec5ShowIndex = index;
+			},
+
+			sec5IndexPrev: function() {
+				var index = this.isSec5ShowIndex - 1 === 0 ? 5: this.isSec5ShowIndex - 1;
+				this.isSec5ShowIndex = index;
+			}
 
     } // methods end
 
