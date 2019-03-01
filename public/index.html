@@ -37,7 +37,7 @@
     <div id="cta" class="bg-contain btn" style="background-image: url('assets/img/common/icons/mark.svg')">
       <div>
         <img src="assets/img/common/icons/cart-l.svg" alt="">
-        <span>立即買砂</span>
+        <span>立即<br>買砂</span>
       </div>
     </div>
   </nav>
@@ -207,8 +207,8 @@
     <img class="left-guy" :src="'assets/img/main/2019/3-' + isTarget + '.png'" alt="">
     <div class="right-video">
       <div class="yb">
-        <iframe src="https://www.youtube.com/embed/A6arSGSKRB0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/A6arSGSKRB0" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
     <div class="bg-contain" style="background-image: url('assets/img/main/2019/3-bg1.png')"></div>
@@ -243,7 +243,7 @@
           </p>
         </div>
       </div>
-      <div class="text-block">
+      <div class="text-block pc">
         <div class="text-block-content">
           <h3>添加活性碳，除臭太驚嘆</h3>
           <div>
@@ -256,6 +256,18 @@
         </div>
       </div>
       <div class="bg-cover" style="background-image: url('assets/img/main/2019/4-2.png')"></div>
+      <div class="text-block m">
+        <div class="text-block-content">
+          <h3>添加活性碳，除臭太驚嘆</h3>
+          <div>
+            <div class="label">活性碳加入量</div>
+            <div class="intro">黃金比例</div>
+          </div>
+          <p>
+            我們在礦砂中添加了帶有除臭、殺菌效果的活性碳，讓您挖砂時不用再裝玩憋氣比賽了。
+          </p>
+        </div>
+      </div>
       <div class="bg-cover" style="background-image: url('assets/img/main/2019/4-3.png')"></div>
       <div class="text-block">
         <div class="text-block-content">
@@ -296,32 +308,27 @@
                 active: isSec5ShowIndex === 1,
                 small_left: isSec5ShowIndex === 5,
                 small_right: isSec5ShowIndex === 2
-              }"
-              @click="sec5IndexThis(1)" src="assets/img/main/2019/5-製作程序1.png" alt="">
+              }" @click="sec5IndexThis(1)" src="assets/img/main/2019/5-製作程序1.png" alt="">
             <img :class="{ 
                 active: isSec5ShowIndex === 2,
                 small_left: isSec5ShowIndex === 1,
                 small_right: isSec5ShowIndex === 3
-              }"
-              @click="sec5IndexThis(2)" src="assets/img/main/2019/5-製作程序2.png" alt="">
+              }" @click="sec5IndexThis(2)" src="assets/img/main/2019/5-製作程序2.png" alt="">
             <img :class="{ 
                 active: isSec5ShowIndex === 3,
                 small_left: isSec5ShowIndex === 2,
                 small_right: isSec5ShowIndex === 4
-              }"
-              @click="sec5IndexThis(3)" src="assets/img/main/2019/5-製作程序3.png" alt="">
+              }" @click="sec5IndexThis(3)" src="assets/img/main/2019/5-製作程序3.png" alt="">
             <img :class="{ 
                 active: isSec5ShowIndex === 4,
                 small_left: isSec5ShowIndex === 3,
                 small_right: isSec5ShowIndex === 5
-              }"
-              @click="sec5IndexThis(4)" src="assets/img/main/2019/5-製作程序4.png" alt="">
+              }" @click="sec5IndexThis(4)" src="assets/img/main/2019/5-製作程序4.png" alt="">
             <img :class="{ 
                 active: isSec5ShowIndex === 5,
                 small_left: isSec5ShowIndex === 4,
                 small_right: isSec5ShowIndex === 1
-              }"
-              @click="sec5IndexThis(5)" src="assets/img/main/2019/5-製作程序5.png" alt="">
+              }" @click="sec5IndexThis(5)" src="assets/img/main/2019/5-製作程序5.png" alt="">
           </div>
           <div class="cards-arrow right" @click="sec5IndexNext">
             <img src="assets/img/common/icons/right-b.svg" alt="">
@@ -358,7 +365,6 @@
               現場抽樣試用，達成品質監管
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -371,6 +377,161 @@
     </div>
   </section>
 
+  <section class="sec6">
+    <div class="content">
+      <div class="title">
+        <div class="title-words">
+          <h2>WA$$UP<br>SHOP</h2>
+          <h3>買砂專區</h3>
+        </div>
+      </div>
+      <div class="shop-block">
+        <div class="shop-product-img">
+          <div class="main-img">
+            <img :class="{ active: buySec.type === 2 && buySec.picIndex === 1 }" src="assets/img/main/2019/松木砂/c1.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 2 && buySec.picIndex === 2 }" src="assets/img/main/2019/松木砂/c2.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 2 && buySec.picIndex === 3 }" src="assets/img/main/2019/松木砂/c3.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 2 && buySec.picIndex === 4 }" src="assets/img/main/2019/松木砂/c4.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 1 && buySec.picIndex === 1 }" src="assets/img/main/2019/礦砂/b1.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 1 && buySec.picIndex === 2 }" src="assets/img/main/2019/礦砂/b2.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 1 && buySec.picIndex === 3 }" src="assets/img/main/2019/礦砂/b3.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 1 && buySec.picIndex === 4 }" src="assets/img/main/2019/礦砂/b4.jpg"
+              alt="">
+            <img :class="{ active: buySec.type === 1 && buySec.picIndex === 5 }" src="assets/img/main/2019/礦砂/b5.jpg"
+              alt="">
+          </div>
+          <div :class="{ active: buySec.type === 2 }" class="img-btns">
+            <div :class="{ active: buySec.picIndex === 1 }" class="img-btn" @click="setBuyPicIndex(1)">
+              <img src="assets/img/main/2019/松木砂/c1.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 2 }" class="img-btn" @click="setBuyPicIndex(2)">
+              <img src="assets/img/main/2019/松木砂/c2.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 3 }" class="img-btn" @click="setBuyPicIndex(3)">
+              <img src="assets/img/main/2019/松木砂/c3.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 4 }" class="img-btn" @click="setBuyPicIndex(4)">
+              <img src="assets/img/main/2019/松木砂/c4.jpg" alt="">
+            </div>
+          </div>
+          <div :class="{ active: buySec.type === 1 }" class="img-btns">
+            <div :class="{ active: buySec.picIndex === 1 }" class="img-btn" @click="setBuyPicIndex(1)">
+              <img src="assets/img/main/2019/礦砂/b1.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 2 }" class="img-btn" @click="setBuyPicIndex(2)">
+              <img src="assets/img/main/2019/礦砂/b2.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 3 }" class="img-btn" @click="setBuyPicIndex(3)">
+              <img src="assets/img/main/2019/礦砂/b3.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 4 }" class="img-btn" @click="setBuyPicIndex(4)">
+              <img src="assets/img/main/2019/礦砂/b4.jpg" alt="">
+            </div>
+            <div :class="{ active: buySec.picIndex === 5 }" class="img-btn" @click="setBuyPicIndex(5)">
+              <img src="assets/img/main/2019/礦砂/b5.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="shop-product-selector">
+          <div class="info">
+            <h2>
+              <b :class="{ active: buySec.type === 1 }">挖砂貓砂 Tai Chi 黑白雙煞 活性碳貓砂</b>
+              <b :class="{ active: buySec.type === 2 }">挖砂貓砂 第二種砂</b>
+            </h2>
+            <div class="price pc">
+              <div class="left">
+                NTD$ {{ buySec.totalAmount }}
+              </div>
+              <div class="right">免運</div>
+            </div>
+            <div class="group">
+              <div class="label">挑選砂種：</div>
+              <div class="inputs">
+                <div class="type-btns">
+                  <div :class="{ active: buySec.type === 1 }" @click="setBuyType(1)" class="type-btn">
+                    <img src="assets/img/main/2019/商品區選砂/6-2.png" alt="">
+                  </div>
+                  <div :class="{ active: buySec.type === 2 }" @click="setBuyType(2)" class="type-btn">
+                    <img src="assets/img/main/2019/商品區選砂/6-1.png" alt="">
+                  </div>
+                  <div class="gambling">
+                    <div class="left">
+                      機率激升
+                      <a href="" target="_blank">什麼機率？</a>
+                    </div>
+                    <div class="right">
+                      <input id="gbl" type="checkbox">
+                      <label for="gbl"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="label">買砂數量：</div>
+              <div class="inputs">
+                <div :class="{ active: buySec.buyPlan === 1 }" class="item-btn" @click="setBuyPlan(1)">
+                  <div>1 箱 5 包裝</div>
+                  <span class="active">
+                    (28kg，約 1 隻成貓 2 個月用量)
+                  </span>
+                </div>
+                <div :class="{ active: buySec.buyPlan === 2 }" class="item-btn" @click="setBuyPlan(2)">
+                  <div>2 箱 10 包裝</div>
+                  <span class="active">
+                    (56kg，約 2 隻成貓 2 個月用量)
+                  </span>
+                </div>
+                <div :class="{ active: buySec.buyPlan === 3 }" class="item-btn" @click="setBuyPlan(3)">
+                  <div class="trangle">
+                    試用
+                    <select v-model="buySec.trialPlan">
+                      <option value="1"> 1 包</option>
+                      <option value="2"> 2 包</option>
+                      <option value="3"> 3 包</option>
+                      <option value="4"> 4 包</option>
+                    </select>
+                  </div>
+                  <span :class="{ active: buySec.trialPlan === '1' }">
+                    (5.6kg，約 1 隻貓用個幾天）
+                  </span>
+                  <span :class="{ active: buySec.trialPlan === '2' }">
+                    (11.2kg，約 1 隻成貓3週用量）
+                  </span>
+                  <span :class="{ active: buySec.trialPlan === '3' }">
+                    (16.8kg，約 1 隻成貓5週用量）
+                  </span>
+                  <span :class="{ active: buySec.trialPlan === '4' }">
+                    (22.4kg，約 1 隻成貓7週用量）
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="price m">
+              <div class="left">
+                NTD$ {{ buySec.totalAmount }}
+              </div>
+              <div class="right">免運</div>
+            </div>
+          </div>
+          <div class="buy-now-section">
+            <div id="buy-btn" class="btn">
+              <img src="assets/img/common/icons/cart-b.svg" alt="">
+              直接購買
+            </div>
+            折價券下一頁填寫
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="content">
@@ -395,6 +556,17 @@
       © Wassup Catlitter 2017 Handcrafted with hard work and love by us
     </div>
   </div>
+
+  <form id="form" action="https://wassup.backme.tw/cashflow/shopping_cart_checkout?locale=zh-TW" method='post'>
+    <input style="display: none" type='hidden' name='utf8' value='✓'>
+    <input style="display: none" type='hidden' name='flag' value="">
+    <input style="display: none" type='hidden' :name="'items[1][project_id]'" value='720'>
+    <input style="display: none" type='hidden' :name="'items[1][reward_id]'" :value='wantToBuyItemId'>
+    <input style="display: none" type='hidden' :name="'items[1][quantity]'" :value='wantToBuyItemQuantity'>
+    <input style="display: none" type='hidden' :name="'items[2][project_id]'" value='720'>
+    <input style="display: none" type='hidden' :name="'items[2][reward_id]'" :value='3725'>
+    <input style="display: none" type='hidden' :name="'items[2][quantity]'" :value='1'>
+  </form>
 
   <!-- <div id="buy-bg" :class="{ active: isShow }" @click="showBuy"></div>
   <div id="buy" :class="{ active: isShow }">
@@ -561,7 +733,8 @@
   fbq('init', '1228346793931453');
   fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1228346793931453&ev=PageView&noscript=1" /></noscript>
+<noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1228346793931453&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
 
 </html>

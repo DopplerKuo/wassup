@@ -75,7 +75,15 @@ $(document).ready(function() {
     data: {
 			isTarget: 'Nike', // 'Nike', 'dudu', 'Leo王', '佑誠', '春m'
 			isSec5ShowIndex: 1,
-    	isShow: false,
+			isShow: false,
+			buySec: {
+				totalAmount: 1100,
+				type: 1, // 1 = 礦砂, 2 = 松木砂
+				picIndex: 1,
+				isGambling: false,
+				buyPlan: 1,
+				trialPlan: '1',
+			},
       wantToBuyItemId: 3722,
       wantToBuyItemQuantity: 1,
       popup: {
@@ -104,10 +112,6 @@ $(document).ready(function() {
 				this.isTarget = target;
 			},
 
-    	showBuy: function() {
-    		// this.isShow = !this.isShow
-    	},
-
     	showPopup: function(which) {
     		this.popup.isShow = true;
     		this.popup.whichMore = which
@@ -133,7 +137,19 @@ $(document).ready(function() {
 			sec5IndexPrev: function() {
 				var index = this.isSec5ShowIndex - 1 === 0 ? 5: this.isSec5ShowIndex - 1;
 				this.isSec5ShowIndex = index;
-			}
+			},
+
+			setBuyType: function(typeIndex) {
+				this.buySec.type = typeIndex;
+			},
+
+			setBuyPicIndex: function(index) {
+				this.buySec.picIndex = index;
+			},
+
+			setBuyPlan: function(buyPlanIndex) {
+				this.buySec.buyPlan = buyPlanIndex
+			},
 
     } // methods end
 
