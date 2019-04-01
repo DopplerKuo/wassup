@@ -11,6 +11,10 @@
 
 body {
   background-color: #000;
+
+  @media screen and (max-width: 992px) {
+    overflow-x: hidden;
+  }
 }
 
 .m { display: none!important; }
@@ -236,6 +240,7 @@ section {
 }
 
 .bg-marquee {
+  width: 100%;
   overflow: hidden;
 
   @media screen and (max-width: 992px) {
@@ -300,16 +305,23 @@ section {
 }
 
 h2 {
-  font-size: 30px;
   font-weight: bold;
   line-height: 1.1;
   font-size: 40px;
+
+  @media screen and (max-width: 992px) {
+    font-size: 30px;
+  }
 }
 
 h3 {
   font-size: 27px;
   font-family: $p800;
   font-weight: 800;
+
+  @media screen and (max-width: 992px) {
+    font-size: 21px;
+  }
 }
 
 .sec2 {
@@ -324,7 +336,7 @@ h3 {
     position: relative;
 
     @media screen and (max-width: 992px) {
-      width: 90%!important;
+      width: 80%!important;
       transform: translate3d(0, 0%, 0)!important;;
       display: block!important;;
       padding: 25px!important;;
@@ -355,6 +367,10 @@ h3 {
     p {
       margin-top: 40px;
       opacity: .9;
+
+      @media screen and (max-width: 992px) {
+        margin-top: 25px;
+      }
     }
 
     .right {
@@ -398,8 +414,8 @@ h3 {
       margin-top: 25px;
 
       @media screen and (max-width: 992px) {
-        width: 300px;
-        flex: 0 0 300px;
+        width: 230px;
+        flex: 0 0 230px;
       }
     }
 
@@ -416,8 +432,9 @@ h3 {
       color: $b;
 
       @media screen and (max-width: 992px) {
-        flex: 0 0 60px;
-        font-size: 60px;
+        margin-right: 8px;
+        flex: 0 0 50px;
+        font-size: 50px;
       }
     }
   }
@@ -434,8 +451,13 @@ h3 {
     @media screen and (max-width: 992px) {
       left: 0;
       right: 0;
-      margin: auto;
-      margin-top: 50px;
+      margin-top: 250px;
+      max-width: 290px;
+      padding: 40px;
+
+      .bottom {
+        display: none;
+      }
 
       .top {
         display: block;
@@ -457,30 +479,43 @@ h3 {
     padding: 0 30px;
     margin-top: 15px;
   }
+}
 
-  .boxes {
-    width: 100%;
-    overflow-x: scroll;
+
+.boxes {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  overflow-x: scroll;
+  @media screen and (max-width: 992px) {
+    margin-top: 60px;
+  }
+}
+
+.box {
+  cursor: pointer;
+  text-align: center;
+  font-family: $p800;
+  font-weight: 800;
+  opacity: 0.6;
+  transition: 0.3s ease;
+
+  &.active {
+    opacity: 1;
   }
 
-  .box {
-    cursor: pointer;
-    text-align: center;
-    font-family: $p800;
-    font-weight: 800;
-    opacity: 0.6;
-    transition: 0.3s ease;
+  &:hover {
+    opacity: .8;
+  }
 
-    &.active {
-      opacity: 1;
-    }
+  img {
+    width: 100%;
+  }
 
-    &:hover {
-      opacity: .8;
-    }
-
-    img {
-      width: 100%;
+  @media screen and (max-width: 992px) {
+    h4 {
+      font-size: 12px;
+      color: $sup;
     }
   }
 }
@@ -560,6 +595,13 @@ h3 {
 }
 
 .sec4 {
+
+  @media screen and (max-width: 992px) {
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
+  }
+
   .block {
     max-width: 950px;
     width: 100%;
@@ -603,10 +645,17 @@ h3 {
 
     @media screen and (max-width: 992px) {
       display: block;
+      margin-top: 0;
 
       .bg-cover {
+        width: 90%;
         padding-top: 52.25%;
         position: relative;
+      }
+
+      .bg-cover:nth-of-type(4) {
+        margin-right: 0;
+        margin-left: auto;
       }
     }
   }
@@ -617,8 +666,8 @@ h3 {
     width: 50%;
 
     @media screen and (max-width: 992px) {
-      flex: 0 0 100%;
-      width: 100%;
+      flex: 0 0 80%;
+      width: 80%;
       height: auto;
     }
   }
@@ -646,10 +695,23 @@ h3 {
     }
 
     @media screen and (max-width: 992px) {
+      margin: -20px 0 0 auto!important;
+      position: relative;
+      z-index: 1;
+
+      &.m {
+        margin-right: auto!important;
+        margin-left: 10px!important;
+      }
+       
       .text-block-content {
         width: 90%;
         margin: auto;
         margin-top: 40px;
+
+        @media screen and (max-width: 992px) {
+          margin-top: 0;
+        }
       }
     }
 
@@ -833,7 +895,7 @@ h3 {
         @media screen and (max-width: 992px) {
           flex: 0 0 100%;
           width: 100%;
-          max-width: 370px;
+          max-width: 300px;
           margin: auto;
           height: 450px;
         }
@@ -881,6 +943,10 @@ h3 {
           max-width: 280px;
           z-index: 1;
           transition: 0.3s ease;
+
+          @media screen and (max-width: 992px) {
+            max-width: 240px;
+          }
         }
 
         img.small_left,
@@ -926,9 +992,15 @@ h3 {
 }
 
 .sec6 {
+  min-height: 0;
   padding-top: 0;
   margin-top: -20%;
   padding-bottom: 50px;
+
+  @media screen and (max-width: 992px) {
+    margin-top: 0;
+    height: auto;
+  }
 
   .content {
     max-width: 1000px;
@@ -938,274 +1010,36 @@ h3 {
     text-align: center!important;
   }
 
-  .shop-block {
-    margin-top: 70px;
-    background-color: $b;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .main-button {
+    cursor: pointer;
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 0;
 
     @media screen and (max-width: 992px) {
-      flex-direction: column;
+      max-width: 240px;
     }
-  }
 
-  .shop-product-img {
-    flex: 0 0 45%;
-    width: 45%;
-
-    @media screen and (max-width: 992px) {
-      flex: 0 0 100%;
-      width: 100%;
+    .main-button-text {
+      position: absolute;
+      font-size: 37px;
+      font-weight: bold;
+      line-height: 1.1;
+      color: $main;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
-    .main-img {
-      position: relative;
-      padding-top: 100%;
-
-      img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        display: none;
-      }
-
-      img.active {
-        display: block;
-      }
-    }
-
-    .img-btns {
-      display: none;
-    }
-
-    .img-btns.active {
-      display: flex;
-      width: 100%;
-      margin-top: 16px;
-
-      @media screen and (max-width: 992px) {
-        display: none;
-      }
-
-      .img-btn {
-        flex: 0 0 calc( 100% / 5 - 16px );
-        width: calc( 100% / 5 - 16px );
-        margin-right: 20px;
-        opacity: 0.5;
-        transition: 0.3s ease;
-        cursor: pointer;
-        
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-
-      .img-btn.active {
-        opacity: 1;
-      }
-
-      .img-btn:nth-last-of-type(1) {
-        margin-right: 0;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  .shop-product-selector {
-    color: $sup;
-    font-family: $p800;
-    font-weight: 800;
-    flex: 0 0 55%;
-    width: 55%;
-
-    @media screen and (max-width: 992px) {
-      flex: 0 0 100%;
-      width: 100%;
-    }
-
-    .info {
-      padding: 40px 55px 15px;
-      
-      @media screen and (max-width: 992px) {
-        padding: 20px;
-      }
-
-      h2 {
-        font-size: 25px;
-
-        b {
-          display: none;
-        }
-
-        b.active {
-          display: block;
-        }
-      }
-
-      .price {
-        display: flex;
-        align-items: center;
-        background-color: #000;
-        margin-top: 25px;
-
-        .left {
-          flex: 1 1 auto;
-          font-size: 40px;
-          padding-left: 5px;
-        }
-
-        .right {
-          flex: 0 0 70px;
-          color: $main;
-          font-size: 23px;
-        }
-      }
-
-      .group {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        .label {
-          flex: 0 0 80px;
-          font-family: $p400;
-          font-weight: 400;
-          font-size: 13px;
-        }
-
-        .inputs {
-          flex: 1 1 auto;
-          width: auto;
-        }
-
-        .type-btns {
-          display: flex;
-          align-items: center;
-        }
-
-        .type-btn {
-          font-size: 0;
-          width: 90px;
-          flex: 0 0 90px;
-          margin-right: 20px;
-          opacity: 0.5;
-
-          img {
-            width: 100%;
-          }
-        }
-
-        .type-btn.active {
-          border: 3px solid $sup;
-          opacity: 1;
-        }
-      }
-
-      .gambling {
-        font-family: $p400;
-        font-weight: 400;
-        font-size: 12px;
-        text-align: left;
-        display: flex;
-        align-items: center;
-
-        a {
-          color: $main;
-          text-decoration: underline;
-        }
-
-        .left {
-          flex: 0 0 70px;
-        }
-
-        .right {
-
-          cursor: pointer;
-
-          input {
-            display: none;
-          }
-
-          label {
-            display: block;
-            width: 50px;
-            height: 50px;
-            box-shadow: inset 0 0 0 2px $sup;
-            border-radius: 100%;
-            transition: 0.3s ease;
-          }
-
-          input:checked + label {
-            box-shadow: inset 0 0 0 2px $sup,
-                        inset 0 0 0 10px $b;
-            background-color: $sup;
-          }
-        }
-      }
-
-      .item-btn {
-        position: relative;
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 10px;
-        box-shadow: inset 0 0 0 2px $sup;
-        display: flex;
-        align-items: flex-end;
-
-        div {
-          font-size: 17px;
-        }
-
-        span {
-          display: none;
-          font-size: 13px;
-          font-family: $p400;
-          font-weight: 400;
-          margin-left: 10px;
-        }
-
-        span.active {
-          display: block;
-        }
-
-        select {
-          background-color: transparent;
-          color: $sup;
-          padding-right: 20px;
-        }
-
-        &.active select {
-          color: $b;
-        }
-      }
-
-      .trangle {
-        position: relative;
-      }
-
-      .trangle:after {
-        content: '';
-        position: absolute;
-        right: 0px;
-        top: 11px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7px 7px 0 7px;
-        border-color: $main transparent transparent transparent;
-      }
-
-      .item-btn.active {
-        background-color: $sup;
-        color: $b;
-      }
+    img {
+      max-width: 200px;
+      width: 90%;
     }
   }
 }
