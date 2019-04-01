@@ -728,7 +728,32 @@ h3 {
     width: 100%;
     position: absolute;
     bottom: 5%;
-    left: 0; }
+    left: 0;
+    -webkit-animation: showUp 0.3s cubic-bezier(0.38, 0.11, 0.41, 1.35) 0s 1 both;
+    animation: showUp 0.3s cubic-bezier(0.38, 0.11, 0.41, 1.35) 0s 1 both;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
+
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes showUp {
+  0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
     @media screen and (max-width: 992px) {
       .sec3 .left-guy {
         width: 200%;

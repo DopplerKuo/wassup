@@ -541,6 +541,13 @@ h3 {
     position: absolute;
     bottom: 5%;
     left: 0;
+    animation: showUp 0.3s cubic-bezier(0.38, 0.11, 0.41, 1.35) 0s 1 both;
+    transition: 0.3s ease;
+
+    @keyframes showUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0px); opacity: 1; }
+    }
 
     @media screen and (max-width: 992px) {
       width: 200%;
