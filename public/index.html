@@ -294,13 +294,62 @@
       </div>
       <img
         class="left-guy"
-        :src="'assets/img/main/2019/3-' + isTarget + '.png'"
+        :src="'assets/img/main/2019/3-Nike.png'"
+        alt=""
+      />
+      <img
+        class="left-guy"
+        :src="'assets/img/main/2019/3-dudu.png'"
+        alt=""
+      />
+      <img
+        class="left-guy"
+        :src="'assets/img/main/2019/3-Leo王.png'"
+        alt=""
+      />
+      <img
+        class="left-guy"
+        :src="'assets/img/main/2019/3-佑誠.png'"
+        alt=""
+      />
+      <img
+        class="left-guy"
+        :src="'assets/img/main/2019/3-春m.png'"
         alt=""
       />
       <div class="right-video">
         <div class="yb">
           <iframe
-            src="https://www.youtube.com/embed/A6arSGSKRB0"
+            v-show="isTarget === 'Nike'"
+            src="https://www.youtube.com/embed/oZ2HLtK37ps"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            v-show="isTarget === 'dudu'"
+            src="https://www.youtube.com/embed/5QN2h8oKxPg"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            v-show="isTarget === 'Leo王'"
+            src="https://www.youtube.com/embed/xeEJQxHzbO8"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            v-show="isTarget === '佑誠'"
+            src="https://www.youtube.com/embed/5cs2xYEu5Dw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            v-show="isTarget === '春m'"
+            src="https://www.youtube.com/embed/KMcrshqYLj4"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

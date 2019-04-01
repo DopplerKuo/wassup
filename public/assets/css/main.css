@@ -713,9 +713,12 @@ h3 {
       color: #ceebf9; } }
 
 .sec3 {
+  pointer-events: none;
   position: relative;
   background-size: 100% auto;
   background-position: 0 100%; }
+  .sec3 #v2-slider {
+    pointer-events: visible; }
   @media screen and (max-width: 992px) {
     .sec3 {
       height: 70vh;
@@ -744,6 +747,7 @@ h3 {
         background-size: 250% auto;
         background-position: center 100%; } }
   .sec3 .right-video {
+    pointer-events: visible;
     width: 100%;
     position: absolute;
     right: 5%;
