@@ -1184,6 +1184,7 @@ h3 {
   .sec6 .title-words > * {
     text-align: center !important; }
   .sec6 .main-button {
+    display: block;
     cursor: pointer;
     position: relative;
     margin: 20px auto;
