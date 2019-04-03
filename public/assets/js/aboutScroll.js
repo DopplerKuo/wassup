@@ -20,5 +20,16 @@ $(function(){
 		else if ($this_Top > $barFixedHeight){
 　　　 $('.fix-bg').addClass('blur')
 		}
+
+		var $buy_d = $(document).height() - ($('#buy').height() + $('footer').height()) * 2 - $('#buy').height();
+		console.log($this_Top)
+		console.log($buy_d)
+		if ($this_Top > $buy_d) {
+			$('#cta').addClass('hide');
+		}
+
+		else if ($this_Top <= $buy_d) {
+			$('#cta').removeClass('hide');
+		}
 	}).scroll();
 })

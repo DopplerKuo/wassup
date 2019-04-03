@@ -90,14 +90,14 @@ header {
     height: 85px;
   }
 
-  div {
+  a {
     animation: gogoro 5s linear 0s infinite reverse both;
   }
 
   &:hover {
     animation-play-state: paused;
 
-    div {
+    a {
       animation-play-state: paused;
     }
   }
@@ -139,6 +139,10 @@ header {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#cta.hide {
+  opacity: 0;
 }
 
 header {

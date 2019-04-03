@@ -334,12 +334,12 @@ header {
       bottom: 10%;
       width: 85px;
       height: 85px; } }
-  #cta div {
+  #cta a {
     animation: gogoro 5s linear 0s infinite reverse both; }
   #cta:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused; }
-    #cta:hover div {
+    #cta:hover a {
       -webkit-animation-play-state: paused;
       animation-play-state: paused; }
   #cta img {
@@ -376,6 +376,9 @@ header {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+#cta.hide {
+  opacity: 0; }
 
 header .bg {
   position: absolute;
