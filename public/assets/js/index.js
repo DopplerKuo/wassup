@@ -139,6 +139,18 @@ $(document).ready(function() {
 				this.isSec5ShowIndex = index;
 			},
 
+			videoNext: function() {
+				var index = PEOPLE.indexOf(this.isTarget);
+				var finalIndex = index + 1 > 4 ? 0: index + 1;
+				this.isTarget = PEOPLE[finalIndex];
+			},
+
+			videoPrev: function() {
+				var index = PEOPLE.indexOf(this.isTarget);
+				var finalIndex = index - 1 === -1 ? 4: index - 1;
+				this.isTarget = PEOPLE[finalIndex];
+			},
+
 			setBuyType: function(typeIndex) {
 				this.buySec.type = typeIndex;
 			},

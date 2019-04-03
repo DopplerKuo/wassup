@@ -198,10 +198,22 @@
         </div>
         <div class="bottom">
           <div id="v-slider">
+            <div class="arrows">
+              <div class="cards-arrow" @click="videoPrev">
+                <img src="assets/img/common/icons/left-b.svg" alt="" />
+              </div>
+              <div class="cards-arrow" @click="videoNext">
+                <img src="assets/img/common/icons/right-b.svg" alt="" />
+              </div>
+            </div>
             <div class="boxes flex-jfs-afs-l3-nw-">
               <div
                 class="box"
-                :class="{ active: isTarget === 'Nike' }"
+                :class="{
+                      active: isTarget === 'Nike',
+                      activeLeft: isTarget === 'dudu',
+                      activeRight: isTarget === '春m',
+                    }"
                 @click="changeTarget('Nike')"
               >
                 <img src="assets/img/main/2019/3-縮圖Nike.png" alt="" />
@@ -209,6 +221,11 @@
               </div>
               <div
                 class="box"
+                :class="{
+                      active: isTarget === 'dudu',
+                      activeLeft: isTarget === 'Leo王',
+                      activeRight: isTarget === 'Nike',
+                    }"
                 :class="{ active: isTarget === 'dudu' }"
                 @click="changeTarget('dudu')"
               >
@@ -217,7 +234,11 @@
               </div>
               <div
                 class="box"
-                :class="{ active: isTarget === 'Leo王' }"
+                :class="{
+                      active: isTarget === 'Leo王',
+                      activeLeft: isTarget === '佑誠',
+                      activeRight: isTarget === 'dudu',
+                    }"
                 @click="changeTarget('Leo王')"
               >
                 <img src="assets/img/main/2019/3-縮圖Leo王.png" alt="" />
@@ -225,7 +246,11 @@
               </div>
               <div
                 class="box"
-                :class="{ active: isTarget === '佑誠' }"
+                :class="{
+                      active: isTarget === '佑誠',
+                      activeLeft: isTarget === '春m',
+                      activeRight: isTarget === 'Leo王',
+                    }"
                 @click="changeTarget('佑誠')"
               >
                 <img src="assets/img/main/2019/3-縮圖佑誠.png" alt="" />
@@ -233,7 +258,11 @@
               </div>
               <div
                 class="box"
-                :class="{ active: isTarget === '春m' }"
+                :class="{
+                      active: isTarget === '春m',
+                      activeLeft: isTarget === 'Nike',
+                      activeRight: isTarget === '佑誠',
+                    }"
                 @click="changeTarget('春m')"
               >
                 <img src="assets/img/main/2019/3-縮圖春m.png" alt="" />
@@ -249,10 +278,22 @@
       style="background-image: url('assets/img/main/2019/3-bg2.png')"
     >
       <div id="v2-slider" class="m">
+        <div class="arrows">
+          <div class="cards-arrow" @click="videoPrev">
+            <img src="assets/img/common/icons/left-b.svg" alt="" />
+          </div>
+          <div class="cards-arrow" @click="videoNext">
+            <img src="assets/img/common/icons/right-b.svg" alt="" />
+          </div>
+        </div>
         <div class="boxes flex-jfs-afs-l3-nw-">
           <div
             class="box"
-            :class="{ active: isTarget === 'Nike' }"
+            :class="{
+              active: isTarget === 'Nike',
+              activeLeft: isTarget === 'dudu',
+              activeRight: isTarget === '春m',
+            }"
             @click="changeTarget('Nike')"
           >
             <img src="assets/img/main/2019/3-縮圖Nike.png" alt="" />
@@ -260,6 +301,11 @@
           </div>
           <div
             class="box"
+            :class="{
+              active: isTarget === 'dudu',
+              activeLeft: isTarget === 'Leo王',
+              activeRight: isTarget === 'Nike',
+            }"
             :class="{ active: isTarget === 'dudu' }"
             @click="changeTarget('dudu')"
           >
@@ -268,7 +314,11 @@
           </div>
           <div
             class="box"
-            :class="{ active: isTarget === 'Leo王' }"
+            :class="{
+              active: isTarget === 'Leo王',
+              activeLeft: isTarget === '佑誠',
+              activeRight: isTarget === 'dudu',
+            }"
             @click="changeTarget('Leo王')"
           >
             <img src="assets/img/main/2019/3-縮圖Leo王.png" alt="" />
@@ -276,7 +326,11 @@
           </div>
           <div
             class="box"
-            :class="{ active: isTarget === '佑誠' }"
+            :class="{
+              active: isTarget === '佑誠',
+              activeLeft: isTarget === '春m',
+              activeRight: isTarget === 'Leo王',
+            }"
             @click="changeTarget('佑誠')"
           >
             <img src="assets/img/main/2019/3-縮圖佑誠.png" alt="" />
@@ -284,7 +338,11 @@
           </div>
           <div
             class="box"
-            :class="{ active: isTarget === '春m' }"
+            :class="{
+              active: isTarget === '春m',
+              activeLeft: isTarget === 'Nike',
+              activeRight: isTarget === '佑誠',
+            }"
             @click="changeTarget('春m')"
           >
             <img src="assets/img/main/2019/3-縮圖春m.png" alt="" />
@@ -592,9 +650,13 @@
             <h3>買砂專區</h3>
           </div>
         </div>
-        <a class="main-button" href="https://shopee.tw/wassup.catlitter" target="_blank">
+        <a
+          class="main-button"
+          href="https://shopee.tw/wassup.catlitter"
+          target="_blank"
+        >
           <div class="main-button-text">
-            立即<br>
+            立即<br />
             買砂
           </div>
           <img src="assets/img/common/icons/mark.svg" alt="" />

@@ -689,25 +689,39 @@ h3 {
 .boxes {
   position: relative;
   z-index: 10;
-  width: 100%;
-  overflow-x: scroll; }
+  width: 100%; }
   @media screen and (max-width: 992px) {
     .boxes {
       margin-top: 60px; } }
 
 .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
   cursor: pointer;
   text-align: center;
   font-family: aktiv-grotesk, "Noto Sans TC", PingFangTC-Semibold, sans-serif, Microsoft JhengHei;
   font-weight: 800;
-  opacity: 0.6;
+  opacity: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease; }
   .box.active {
-    opacity: 1; }
-  .box:hover {
-    opacity: .8; }
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .box.activeLeft {
+    opacity: 0.6;
+    -webkit-transform: translateX(calc(-100% - 15px));
+    -ms-transform: translateX(calc(-100% - 15px));
+    transform: translateX(calc(-100% - 15px)); }
+  .box.activeRight {
+    opacity: 0.6;
+    -webkit-transform: translateX(calc(100% + 15px));
+    -ms-transform: translateX(calc(100% + 15px));
+    transform: translateX(calc(100% + 15px)); }
   .box img {
     width: 100%; }
   @media screen and (max-width: 992px) {
@@ -802,6 +816,38 @@ h3 {
         top: 0;
         width: 100%;
         height: 100%; }
+
+#v2-slider, #v-slider {
+  position: relative;
+  pointer-events: none;
+  height: 100px;
+  margin-top: 20px; }
+  @media screen and (max-width: 550px) {
+    #v2-slider, #v-slider {
+      top: 50px; } }
+  #v2-slider .arrows, #v-slider .arrows {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #v2-slider .cards-arrow, #v-slider .cards-arrow {
+    pointer-events: visible;
+    cursor: pointer;
+    margin: 0 10px;
+    display: inline-block; }
+    #v2-slider .cards-arrow img, #v-slider .cards-arrow img {
+      width: 30px; }
 
 @media screen and (max-width: 992px) {
   .sec4 {
