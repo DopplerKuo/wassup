@@ -87,8 +87,9 @@ $(document).ready(function() {
       wantToBuyItemId: 3722,
       wantToBuyItemQuantity: 1,
       popup: {
-      	whichMore: 1,
-      	isShow: false
+      	whichOne: 1,
+				isShow: false,
+				img: '',
 			},
 			flashes: ""
 		},
@@ -161,6 +162,22 @@ $(document).ready(function() {
 
 			setBuyPlan: function(buyPlanIndex) {
 				this.buySec.buyPlan = buyPlanIndex
+			},
+
+			showPopup1: function() {
+				this.popup.isShow = true;
+				this.popup.whichOne = 1;
+			},
+
+			showPopup2: function() {
+				this.popup.isShow = true;
+				this.popup.whichOne = 2;
+			},
+
+			showImg: function(src) {
+				this.popup.isShow = true;
+				this.popup.whichOne = 'img';
+				this.popup.img = src;
 			},
 
     } // methods end
