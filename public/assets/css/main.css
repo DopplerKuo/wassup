@@ -703,9 +703,6 @@ h3 {
   position: relative;
   z-index: 10;
   width: 100%; }
-  @media screen and (max-width: 992px) {
-    .boxes {
-      margin-top: 60px; } }
 
 .box {
   position: absolute;
@@ -750,7 +747,21 @@ h3 {
   z-index: 10;
   min-height: 57vw; }
   .sec3 #v2-slider {
-    pointer-events: visible; }
+    pointer-events: visible;
+    top: -44vw;
+    margin-top: 44vw; }
+    @media screen and (max-width: 768px) {
+      .sec3 #v2-slider {
+        top: -30vw;
+        margin-top: 30vw; } }
+    @media screen and (max-width: 575px) {
+      .sec3 #v2-slider {
+        top: -14vw;
+        margin-top: 14vw; } }
+    @media screen and (max-width: 490px) {
+      .sec3 #v2-slider {
+        top: -10vw;
+        margin-top: 10vw; } }
   @media screen and (max-width: 992px) {
     .sec3 {
       height: 70vh;
