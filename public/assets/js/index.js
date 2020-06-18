@@ -52,7 +52,7 @@ $(document).ready(function() {
     }, 2000);
     setTimeout(() => {
 			$('body').removeClass('show');
-			$('body').css('overflow', 'auto');
+			$('body').css('overflow-y', 'auto');
 			$('#nav')
         .css('opacity', 1)
       $('.bg')
