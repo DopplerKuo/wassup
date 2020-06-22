@@ -26,6 +26,10 @@
   border-radius: 2px;
 }
 
+html {
+  overflow-y: auto;
+}
+
 body {
   background-color: #000;
   overflow: hidden;
